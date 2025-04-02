@@ -123,7 +123,7 @@ Los nombres de los archivos de los componentes pueden tener letras mínúculas o
 Si un componente contiene código HTML, entonces Cyan Air creará un objeto llamado igual que la última parte de la ruta del archivo, sin la extensión. Por ejemplo, si el componente es **./components/componente1.html**, Cyan Air, después de insertarlo en el DOM (cuando se ejecute el método **Import**), tomará como nombre solo **componente1** y creará automáticamente un objeto llamado **componente1**. Luego, a partir de ese momento, **componente1** adquiere algunas propiedades y métodos útiles para la interactividad de la aplicación web.
 
 ## Propiedades y métodos de Cyan Air:
-* **Import(componentFile: string)**: sincrónicamente lee el código CSS, HTML y JavaScript del archivo especificado con ruta y nombre en el parámetro **componentFile**, e inserta en la página web las secciones CSS y JavaScript, y en el DOM la sección HTML.
+* **Import(archivoComponente: string, idNodoPadre: string = '', clases: string = '')**: sincrónicamente lee el código CSS, HTML y JavaScript del archivo especificado con ruta y nombre en el parámetro **archivoComponente**, e inserta en la página web las secciones CSS y JavaScript, y en el DOM la sección HTML, como hijo del nodo con el id especificado en **idNodoPadre**, con las clases dadas en **clases** (separadas por un espacio). Si no se especifica un nodo padre, el componente se inserta en el BODY.
 * **GetObjectsListening()**: devuelve una lista de todos los objetos que están escuchando en ese momento. Cyan Air siempre está escuchando.
 
 ## Propiedades, eventos y métodos de los componentes HTML
